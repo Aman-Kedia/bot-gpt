@@ -88,12 +88,13 @@ src/
 ## 🔧 Environment Variables
 
 Create a `.env` file:
+```bash
 PORT=3000
 MONGODB_URI=your_mongo_connection_string
 LLM_PROVIDER_URL=https://router.huggingface.co/v1/chat/completions
-
 LLM_MODEL=openai/gpt-oss-20b:groq
 LLM_API_KEY=hf_xxxxxxxxxxxxx
+```
 
 ---
 
@@ -174,3 +175,4 @@ Using:
 
 
 https://router.huggingface.co/v1/chat/completions
+
