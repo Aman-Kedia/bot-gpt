@@ -61,7 +61,7 @@ Users can only access their own conversations.
 ---
 
 ## 📂 Folder Structure
-
+```
 src/
 │
 ├── controllers/
@@ -82,6 +82,7 @@ src/
 │
 ├── db.js
 └── index.js
+```
 
 ---
 
@@ -175,4 +176,5 @@ Using:
 
 
 https://router.huggingface.co/v1/chat/completions
+
 
