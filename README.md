@@ -103,6 +103,7 @@ LLM_API_KEY=hf_xxxxxxxxxxxxx
 git clone https://github.com/<your-username>/<repo>.git
 cd <repo>
 npm install
+```
 
 ---
 
@@ -110,42 +111,52 @@ npm install
 
 ```bash
 node src/index.js
+```
 
 Expected output:
 ```bash
 Connected to MongoDB
 Server listening on 3000
+```
 
+---
 
-🧪 Testing
+## 🧪 Testing
+
 ✔ Create User
 ```bash
 curl -X POST http://localhost:3000/users \
   -H "Content-Type: application/json" \
   -d "{\"name\":\"Aman\",\"email\":\"aman@example.com\"}"
+```
 
 ✔ Create Conversation
 ```bash
 curl -X POST http://localhost:3000/conversations \
   -H "Content-Type: application/json" \
   -d "{\"user_email\":\"aman@example.com\",\"first_message\":\"Hello\"}"
+```
 
 ✔ Add Message
 ```bash
 curl -X POST http://localhost:3000/conversations/<ID>/messages \
   -H "Content-Type: application/json" \
   -d "{\"user_email\":\"aman@example.com\",\"text\":\"Tell me a joke\"}"
+```
 
 ✔ Fetch User Conversations
 ```bash
 curl http://localhost:3000/conversations/user/aman@example.com
+```
 
 ✔ Fetch Conversation Messages
 ```bash
 curl "http://localhost:3000/conversations/<ID>?user_email=aman@example.com"
+```
 
+---
 
-🤖 HuggingFace Chat Example
+## 🤖 HuggingFace Chat Example
 
 This backend sends:
 ```bash
@@ -157,8 +168,9 @@ This backend sends:
   ],
   "stream": false
 }
-
+```
 
 Using:
+
 
 https://router.huggingface.co/v1/chat/completions
